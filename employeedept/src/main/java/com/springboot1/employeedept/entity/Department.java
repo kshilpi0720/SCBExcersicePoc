@@ -28,7 +28,5 @@ public class Department {
 	@Transient
 	@ManyToOne
 	private Employee employee;
-	
-	
 
 }
