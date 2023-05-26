@@ -11,6 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 import lombok.AllArgsConstructor;
@@ -38,13 +39,15 @@ public class Employee {
 	private Date joining_date;
 	@Column(name = "ADD_ID")
 	private Long Add_id;
+	@Transient
 	@Column(name = "INSERTED_ON")
 	private int Inserted_on;
+	@Transient
 	@Column(name = "UPDATED_ON")
 	private int updated_on;
 	@Transient
-	@OneToMany(mappedBy="employee")
-	private List<Department> department;
+	@OneToOne
+	private Department department;
 	@Transient
 	private Address address;
 //	@Transient

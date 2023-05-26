@@ -9,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Address {
-	private int Id;
+	private long Id;
 	private String address_line1;
 	private String address_Line2;
 	private String area;
